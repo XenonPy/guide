@@ -53,4 +53,45 @@ But what can we do with these variables? The next thing to learn is printing. Fi
 | Integer  | A whole number  | `y = 45`|
 | String  | Text  | `name = "XenonPy`   |
 | Float | A decimal number | `x = 5.3`|
- 
+
+Note that some types are compatible, and others are not. Here's how to print to the console:
+
+```python
+y = 52
+language = "Python"
+x = 97.4
+message = "Hello"
+z = 3
+
+print(y)
+print(x)
+print(x + y)
+print(language)
+print(message + language)
+print(message * 3)
+```
+> If you're confused about the symbols, math in python is `*` for multiplication, `/` for division, `+` for addition, and `-` for subtraction. There are other special ones you'll learn about later.
+
+The output is:
+```
+52
+97.4
+149.4
+Python
+HelloPython
+HelloHelloHello
+```
+Let's go over what this means. The first four work as we'd expect. Adding strings is a bit weird, but reasonable. But multiplying a string gives an interesting result: it repeats the string that many times. Say we want to print `"Hello Python"` without adding spaces to our variables. Here's the first way:
+```python
+language = "Python"
+message = "Hello"
+
+print(language + " " + message)
+```
+But this is untidy. What if there were an easier way? Behold `f-strings`.
+```python
+language = "Python"
+message = "Hello"
+
+print(language + " " + message)
+```
