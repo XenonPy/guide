@@ -41,7 +41,16 @@ The first thing to learn in Python is variables. These are simply assigning a sp
 ```python
 myVariable = "something"
 anotherVariable = 65
+lastVariable = 2.9
 ```
 Variables in Python can be declared as above. They can contain `a-Z`, `0-9`, and `_`, but they must not start with a number or underscore, and they may not end with an underscore.
-> Note: this does not apply to builtin variables like `__name__`, and you may sometimes get away with it, but it it *highly* discouraged.
+> Note: Leading underscores have vaild use cases for names, such as internal functions in modules, and trailing underscores are used in some `builtin` methods, but for now stick to the above rules.
 
+But what can we do with these variables? The next thing to learn is printing. First let's discuss the two **data types** we've learned so far. We have:
+
+| Name  | Value | Example |
+| ------------- | ------------- | ----- |
+| Integer  | A whole number  | `y = 45`|
+| String  | Text  | `name = "XenonPy`   |
+| Float | A decimal number | `x = 5.3`|
+ 
