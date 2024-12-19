@@ -1,7 +1,7 @@
 # XenonPy/guide
 A guide that teaches you stuff
 ## Contents
-* [Python Basics 1](Python-Basics-1)
+* [Python Basics 1](#Python-Basics-1)
   * Estimated Time: 35 minutes
   * Skill Summary: Basic Python skills, including conditionals, functions, lists, dictionaries, and programming concepts
   * Project: Store Manager
