@@ -1,7 +1,7 @@
 # XenonPy/guide
 A guide that teaches you stuff
 ## Contents
-* Python Basics 1
+* [Python Basics 1](Python-Basics-1)
   * Estimated Time: 35 minutes
   * Skill Summary: Basic Python skills, including conditionals, functions, lists, dictionaries, and programming concepts
   * Project: Store Manager
@@ -106,3 +106,5 @@ name = input("What is your name? ")
 print(f"Hello {name}!")
 ```
 Pretty simple, right? Just remember that if you don't include a space after your prompt (the string you have inside the parentheses), it might look a bit confusing. Prompts can also be `f-strings`, which makes them even more flexible.
+
+So we can get input, print stuff, and store values. But we can't take actions based on them. That sounds like a job for **conditionals**! Conditionals are just if/else if/else statements. If you've ever seen a flowchart, conditionals are the progamming equivalent. Here's how to do a simple conditional:
