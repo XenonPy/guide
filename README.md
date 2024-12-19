@@ -22,7 +22,10 @@ A guide that teaches you stuff
   * Project: CTF #2 (Micro-CMS v1)
 
 # Python Basics 1
-Python is the most used scripting language in the world. It's a powerful and versatile language, however, like most interpreted languages, it is slow in comparison to languages like C or Rust.
+> #### Versioning
+> All examples for Python in this book were tested on Python `3.12`, however, they should work on any version of Python `3.9` or above.
+
+Python is the most used scripting language in the world. It's a powerful and versatile language, however, like most interpreted languages, it is slow in comparison to languages like C or Rust. 
 > ### Compiled vs Interpreted
 > Compiled and Interpreted refer to how a language's code is run.
 > Computers can't understand programming languages that we use.
@@ -88,10 +91,18 @@ message = "Hello"
 
 print(language + " " + message)
 ```
-But this is untidy. What if there were an easier way? Behold `f-strings`.
+But this is untidy. What if there were an easier way? Behold `f-strings`!
 ```python
 language = "Python"
 message = "Hello"
 
-print(language + " " + message)
+print(f"{language} {message}")
 ```
+F-strings are the easiest way to include variables in strings, and they can actually include any expression. To make them, you simply declare the string as `f""` instead of `""` and add `{}` around any variables. Frontend programmers will recall that this also works in JSX. 
+
+Now that you understand printing and variables, we can move on to **input**. Input is what makes your programs truly interactive, in fact, input is a part of almost all of the programs we use daily, in one form or another. Input is a **function** that returns a string. A function is just a name for a piece of reusable code that can take in any number of parameters (variables that you give to the function depending on what you're using it on), including none. It then executes code and optionally return a variable. Here's how to get input from the console:
+```python
+name = input("What is your name? ")
+print(f"Hello {name}!")
+```
+Pretty simple, right? Just remember that if you don't include a space after your prompt (the string you have inside the parentheses), it might look a bit confusing. Prompts can also be `f-strings`, which makes them even more flexible.
