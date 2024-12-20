@@ -21,8 +21,15 @@ A guide that teaches you stuff
   * Skill Summary: Complete your first hack! Learn how to use important tools and simple injection to exploit a site.
   * Project: CTF #2 (Micro-CMS v1)
 
+## How to use
+To use this guide, simply read the learning section, and understand the examples. Ideally, run them too and play around with how they work. Don't be afraid to experiment. Then, in the project section, you'll have guidelines and hints for how to make a project using the skills you've learned. Share your project/results in the Discussions tab.
+> This is a note. It doesn't have a bolded header line, so it's a one-liner tip that you should read.
+
+Notes are not to be confused with Deep Dives (which have a bolded header line):
+> #### Deep Dives
+> When you see information in blockquotes like this, it means it's an optional short section of reading explaining something at a deeper level. These aren't necessary, but they can be interesting and ocasionally useful.
+
 # Python Basics 1
-> #### Versioning
 > All examples for Python in this book were tested on Python `3.12`, however, they should work on any version of Python `3.9` or above.
 
 Python is the most used scripting language in the world. It's a powerful and versatile language, however, like most interpreted languages, it is slow in comparison to languages like C or Rust. 
@@ -105,6 +112,51 @@ Now that you understand printing and variables, we can move on to **input**. Inp
 name = input("What is your name? ")
 print(f"Hello {name}!")
 ```
-Pretty simple, right? Just remember that if you don't include a space after your prompt (the string you have inside the parentheses), it might look a bit confusing. Prompts can also be `f-strings`, which makes them even more flexible.
+Pretty simple, right? Just remember that if you don't include a space after your prompt (the string you have inside the parentheses), it might look a bit confusing. Prompts can also be `f-strings`, which makes them even more flexible. In addition, it will always return a string, so if you want to make it a number, just wrap it in `int()` (or `float()` if it's a float). 
 
 So we can get input, print stuff, and store values. But we can't take actions based on them. That sounds like a job for **conditionals**! Conditionals are just if/else if/else statements. If you've ever seen a flowchart, conditionals are the progamming equivalent. Here's how to do a simple conditional:
+```python
+number = input("Pick a random number: ")
+if number == 7:
+  print("You guessed the number!")
+elif number > 7:
+  print("Too big!")
+elif number < 7:
+  print("Too small!")
+```
+Before we go any further, we need to talk about indentation. Unlike other languages, Python does regonize whitespace. For each nested block you have, you need one indent. One indent is equivalent to one `TAB`, usually two keys above your left shift, or 1-8 spaces. However, you cannot mix spaces and tabs, and if you use spaces for one indent, you must use it for the whole block (the same is true vice-versa).
+
+In this case, the user must guess a number, and it gives them some info about their guess. To run the code inside of a conditional block, the condition must be true. Here the conditions were `number == 7`, `number > 7`, and `number < 7`. A condition (note that an if statement can have multiple conditions if they are seperated with `or` or `and`) is two variables (remember, a variable can be a fixed value like here) and a symbol. Here's a handy little table for different symbols that you can use:
+
+| Code  | Condition | Example |
+| ------------- | ------------- | ----- |
+| `==` | Two variables are the same   | `guess == secretNumber`|
+| `>` | The left condition is greater than the right | `y > 46`|
+| `<` | The left condition is less than the right | `x < 14`|
+| `and` | Both the condition on the left and right are true | `x < 14`|
+| `or` | Either the left condition or the right condition is true | `x < 14`|
+| `not` | The following condition is not true | `x < 14`|
+
+Remember that `=` is NOT the equality symbol, it is only used to declare variables.
+> #### Type-specific equality
+> JS programmers will know `===`, the type-specific equality sign. In Python, `==` is already type specific. So for example:
+> ```python
+> x = 6
+> y = "6"
+>
+> if x == y:
+>   print("True")
+> else:
+>   print("Not True")
+> ```
+> We can see that the output is `Not True`. If we want a type-regardless equality, we must convert the variables to a common type, like this:
+> ```python
+> x = 6
+> y = "6"
+>
+> if int(x) == int(y):
+>   print("True")
+> else:
+>   print("Not True")
+> ```
+> This returns `True`.
