@@ -3,7 +3,7 @@ A guide that teaches you stuff
 ## Contents
 * [Python Basics 1](#Python-Basics-1)
   * Estimated Time: 35 minutes
-  * Skill Summary: Basic Python skills, including conditionals, functions, lists, dictionaries, and programming concepts
+  * Skill Summary: Basic Python skills, including conditionals, functions, lists, loops, and programming concepts
   * Project: Store Manager
 * Web Basics 1
   * Estimated Time: 25 mins
@@ -160,3 +160,96 @@ Remember that `=` is NOT the equality symbol, it is only used to declare variabl
 >   print("Not True")
 > ```
 > This returns `True`.
+
+We now have conditionals down, so let's move on to functions. Here's some pseudocode (fake code that represents lengthier real code):
+```
+start
+do task
+...
+...
+do second task
+...
+...
+do third task
+...
+...
+if task not done then
+do task
+...
+...
+do second task
+...
+...
+do third task
+...
+...
+else if task is done then
+do fourth task
+...
+...
+finish
+```
+This code is very long. It could concievably be longer, depending on how many lines the tasks take. But how can we make it shorter?
+
+First we can notice that the tasks 1, 2 and 3 are always executed in that order, at the same time. We went over this before with input: A function is just a named piece of reusable code that can take in any number of parameters (variables that you give to the function depending on what you're using it on), including none. It then executes code and optionally return a variable. So we could write a function:
+```
+start
+function tasksequence
+do task
+...
+...
+do second task
+...
+...
+do third task
+...
+...
+
+do tasksequence
+if task not done then
+do tasksequence
+else if task is done then
+do fourth task
+...
+...
+finish
+```
+Much shorter. In practice, functions shorten code even more than this: if we had to write binary code to interact with the display every time we printed to the console, coding would be much harder. Functions are also powerful black boxes: we can write code to print to the console without understanding the physics and chemistry behind an LCD screen. We can make games without understanding phosphorus doping. We'll continue with the task sequence example, here's how to write your own in Python:
+```python
+def task_sequence():
+  print("1")
+  print("2")
+  print("3")
+task_sequence()
+task_sequence()
+print("4")
+```
+This will output:
+```
+1
+2
+3
+1
+2
+3
+4
+```
+So we can use functions to shorten code. But what if we want a function to do different things depending on a value? We can use **parameters**! Let's give the esoteric but classic example of adding numbers. Our function will take in two numbers and output one number (the sum).
+```python
+def add(a, b)
+  return a + b
+print(add(2, 4))
+```
+Try this code, and try inputting different numbers. You can see this function can be used for any two numbers. 
+> #### Typed Parameters and Default Values
+> It's nice to have parameters that we don't need to specify every time, but that we still have the option to. These are default values for parameters. We can make them like so:
+> ```python
+> def add(a, b=5):
+>   return a+b
+> ```
+> And if we want to specify a type for the parameter:
+> ```python
+> def add(a: int, b: int
+>   return(a + b)
+> ```
+> These will be more useful as you progress with your Python, so it's nice to get them out of the way.
