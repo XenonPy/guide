@@ -8,11 +8,11 @@ A guide that teaches you stuff
 * Web Basics 1
   * Estimated Time: 25 mins
   * Skill Summary: Understanding the different parts of a site, including HTML, CSS, and JS, and learning how to Inspect.
-  * Project: Wiki
+  * Project: CTF #1 (A little something to get you started)
 * Web Basics 2 
   * Estimated Time: 5 mins
   * Skill Summary: Understanding headers, URL parameters, and routes.
-  * Project: CTF #1 (A little something to get you started)
+  * Project: None
 * Working with the Shell
   * Estimated Time: 15 mins
   * Skill Summary: Learn how to manipulate files and run commands in a shell.
