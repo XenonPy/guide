@@ -253,3 +253,31 @@ Try this code, and try inputting different numbers. You can see this function ca
 >   return(a + b)
 > ```
 > These will be more useful as you progress with your Python, so it's nice to get them out of the way.
+
+As you code things with Python, you may want a way to store multiple values in a variable. There are many provided data types for doing this, including sets, tuples, and dictionaries, but the one we'll focus on is the list. Lists are mutable. In Python, mutability means that something can be modified after it is created. You can modify or create items in a list, which are referenced by their index. Importantly, in most programming languages, counting starts at zero. So if we have a list:
+```python
+[24, 15, 84]
+```
+Then the indexes for each would be as follows:
+```none
+24 => 0
+15 => 1
+84 => 2
+```
+As you saw in the list code block above, lists in Python are denotated by square brackets. Here's another example:
+```python
+no_items = []
+one_type = [1, 3, 5, 2, 3, 1, 9, 4, 7]
+multiple_types = ["Hello", 14, 9.7]
+```
+This is a good time to point out that lists can have multiple types! Then can also be empty, which is useful for adding to them in loops, and they can also be infinitely long.
+> Before you try `while True: list.append("idk")`, know that lists *do* have length limits, but this is determined by how powerful your computer is and not an arbitrary bound.
+
+But we said that lists were mutable, so how do we modify them? The basics are as follows:
+#### Add to end of list (append)
+WIP
+#### Change existing item
+WIP
+#### Remove item
+WIP
+
